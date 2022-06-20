@@ -2,3 +2,6 @@ environments:
   - dev
   - test
   - live
+
+excluded-workflows:
+  - Rebase
