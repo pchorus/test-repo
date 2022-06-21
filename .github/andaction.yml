@@ -1,7 +1,9 @@
-environments:
-  - dev
-  - test
-  - live
+deployment:
+  environments:
+    - dev
+    - test
+    - live
 
-excluded-workflows:
-  - Rebase
+  excluded-workflows:
+    - Deploy
+    - Rebase
