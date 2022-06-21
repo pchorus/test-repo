@@ -1,3 +1,7 @@
+actions:
+  excluded-workflows:
+    - Rebase
+
 deployment:
   environments:
     - dev
