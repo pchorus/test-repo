@@ -4,10 +4,4 @@ actions:
 
 deployment:
   environments:
-    - dev
-    - test
     - live
-
-  excluded-workflows:
-    - Deploy
-    - Rebase
