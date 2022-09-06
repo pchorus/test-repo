@@ -6,4 +6,5 @@ deployment:
   environments:
     - live
   excluded-workflows:
+    - Deploy
     - Rebase
