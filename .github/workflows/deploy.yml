@@ -16,3 +16,4 @@ jobs:
         with:
           access_token: ${{ github.token }}
           args: set-state --state failure
+      - run: exit 1
