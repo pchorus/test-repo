@@ -5,3 +5,5 @@ actions:
 deployment:
   environments:
     - live
+  excluded-workflows:
+    - Rebase
