@@ -12,8 +12,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: moneymeets/ghd@v2
-        with:
-          access_token: ${{ github.token }}
-          args: set-state --state failure
-      - run: exit 1
+      - run: |
+          gh api \
+          --method POST \
+          -H "Accept: application/vnd.github.v3+json" \
+          /repos/${{ github.repository_owner }}/${{ github.event.repository.name }}/deployments/${{ github.event.deployment.id }}/statuses \
+          -f environment="${{ github.event.deployment.environment }}" \
+          -f state="${{ job.status == 'success' && 'success' || 'failure' }}" \
