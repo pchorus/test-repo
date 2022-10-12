@@ -14,7 +14,7 @@ jobs:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
-      - uses: moneymeets/moneymeets-composite-actions/set-deployment-status@feature/set-deployment-status-set-log-url
+      - uses: moneymeets/moneymeets-composite-actions/set-deployment-status@master
         with:
           environment: ${{ github.event.deployment.environment }}
           state: success
