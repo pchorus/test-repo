@@ -4,4 +4,3 @@ first
 second
 third
 
-New test commit
