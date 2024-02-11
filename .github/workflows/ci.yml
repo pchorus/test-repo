@@ -4,4 +4,4 @@ jobs:
   return-state:
     runs-on: ubuntu-20.04
     steps:
-      - run: exit 1
+      - run: exit 2
