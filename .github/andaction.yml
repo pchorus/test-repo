@@ -4,7 +4,15 @@ actions:
 
 deployment:
   environments:
-    - live
+    - name: dev
+    - name: test
+    - name: staging
+  requires:
+    - dev
+    - test
+    - name: live
+      requires:
+        - staging
   excluded-workflows:
     - Deploy
     - Rebase
