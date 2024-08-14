@@ -7,9 +7,9 @@ deployment:
     - name: dev
     - name: test
     - name: staging
-  requires:
-    - dev
-    - test
+      requires:
+        - dev
+        - test
     - name: live
       requires:
         - staging
