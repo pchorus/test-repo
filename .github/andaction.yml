@@ -6,13 +6,12 @@ deployment:
   environments:
     - name: dev
     - name: test
-    - name: staging
       requires:
         - dev
-        - test
     - name: live
       requires:
-        - staging
+        - dev
+
   excluded-workflows:
     - Deploy
     - Rebase
